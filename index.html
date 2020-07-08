@@ -11,20 +11,22 @@
 </head>
 
 <body>
-    <div class="row h-100 text-center main-section">
-        <div class="col-sm-12 my-auto center-page">
+    <div class="bg-main">
+    <div class=" h-100 text-center main-section">
+        <div class="col-sm-6 my-auto center-page">
             <h1>Guess the Number</h1>
+            <h3>guesses left</h3>
             <h2 style="font-size: 200px; " id="guess-remaining"></h2>
-            <h3 id="resultArea"></h3>
-            <input type="number" name="guessing" id="guessingArea" >
+            <h3 role="alert" id="resultArea"></h3>
+            <input class="input-guess" type="number" name="guessing" id="guessingArea" >
             <button class="btn btn-success " onclick="guessNumber()">Guess the number!</button>
-            <button class="btn btn-warning" id="resetButton" onclick="resetGame()" value="Reset">Reset</button>
+            <button class="btn btn-warning" id="resetButton" onclick="resetGame(); timecounting()" value="Reset">Reset</button>
             <div style="font-size: 30px" id="historyArea"></div>
             <h2 style="font-size: 80px" id="timecount"></h2>
+            <h2 id="results">Previous Results</h2>
         </div>
-        <aside id="results"></aside>
     </div>
-
+</div>
 
 
 

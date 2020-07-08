@@ -1,14 +1,48 @@
-body {
+.bg-main {
+  margin-right: 0;
+  padding-right: 0;
     /* The image used */
-    background-image: radial-gradient(rgba(245, 246, 252, 0.52), rgb(181, 30, 30));
+    background-image: linear-gradient(rgba(135, 151, 242, 0.52), rgb(47, 47, 177));
   
     /* Full height */
     /* height: 100%;  */
     height: 100vh;
+    
     /* min-height: 500px; */
   
     /* Center and scale the image nicely */
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
   }
+
+  .alert-danger {
+    margin: auto;
+    width: 40% ;
+   opacity: .7;
+    border: none;
+  }
+
+.main-section{
+  display: flex;
+  justify-content: center;
+  margin-right: none !important;
+}
+
+.input-guess{
+  margin: 2%;
+  font-size: 80%;
+  border-radius: 10px;
+  border: none;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+.center-page{
+background: linear-gradient(35deg, rgba(255, 0, 0, 0.372), rgba(0, 0, 255, 0.600));
+border-radius: 10px;
+padding: 20px;
+
+}
