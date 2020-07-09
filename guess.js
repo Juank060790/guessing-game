@@ -32,6 +32,7 @@ function addingResults() {
 }
 
 function guessNumber() {
+    
     let userNumber = document.getElementById("guessingArea").value
 
     if (history.includes(userNumber)){
@@ -66,12 +67,16 @@ function guessNumber() {
     document.getElementById("historyArea").innerHTML = `history: ${history}`
     document.getElementById("guessingArea").value = ''
     document.getElementById("guess-remaining").innerHTML = amountGuesssing = amountGuesssing - 1
+    
     if (amountGuesssing === 0) {
         resetGame()
         clearInterval(myTime)
         alert("Time to Drink!!")
+        document.getElementById("button-guess").disabled = true;
+        
     }
 }
+
 
 function resetGame() {
 
@@ -82,9 +87,10 @@ function resetGame() {
     document.getElementById("historyArea").innerHTML = `history: ${history}`
     console.log(randomNumber)
     document.getElementById("guessingArea").innerHTML = ""
-    let time = 30
-    document.getElementById('timecount').innerHTML = `${time}`
-
+    clearInterval(myTime)   
+    time = 30
+    document.getElementById('timecount').innerHTML = time
+    document.getElementById("button-guess").disabled = false;
 }
 
 
